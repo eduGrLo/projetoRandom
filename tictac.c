@@ -6,6 +6,7 @@ void showTab(char tab[3][3]){
   int i, j;
   static int count = 0;
 
+
   printf("Rodada [%d]\n", (++count));
 
   for(i = 0; i < 3; i++){
@@ -23,6 +24,7 @@ void showTab(char tab[3][3]){
   printf("|\n ___ ___ ___ \n");
 
 }
+
 
 bool verify(char t[3][3], char p){
   bool win = false;
