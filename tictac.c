@@ -54,6 +54,32 @@ bool verify(char t[3][3], char p){
     temp = 0;
   }
 
+  j = 0;
+
+  for(i = 0; i < 3; i++){	//  Verifica condicao de vitoria diagonal (top esq - bot dir)
+    if(t[i][j++] == p){
+      temp++;
+    }
+  }
+
+  if(temp == 3){
+    win = true;
+  }
+  temp = 0;
+
+  j = 3;
+
+  for(i = 0; i < 3; i++){	//  Verifica condicao de vitoria diagonal (top dir - bot esq)
+    if(t[i][--j] == p){
+      temp++;
+    }
+  }
+
+  if(temp == 3){
+    win = true;
+  }
+  temp = 0;
+
   return win;
 }
 
